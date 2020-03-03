@@ -80,3 +80,25 @@ setInterval(function () {
   }
 }, 250);
 
+
+
+// Gestion du nav dropdown
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function toggleNav() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+const changeImg = (e) => {
+  let src = e.src.split('potager');
+  src = src[src.length - 1].split('.')
+  src = parseInt(src[0], 10)
+  src += 1
+  src > 3 ? src = 1 : false
+  e.src = `./img/potager${src}.jpeg`
+}
