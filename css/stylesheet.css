@@ -8,8 +8,8 @@
   --secondColor: rgb(21, 26, 117);
 
   --back0: #5D4037;
-  --back1: rgb(243, 243, 243);
-  --back2: #BCC8CE;
+  --back1: rgb(254, 254, 254);
+  --back2: rgb(217, 230, 238);
   --back21: #859AA4;
   --back3: #607D8B;
   --back4: #416475;
@@ -113,6 +113,7 @@ header {
   .flexRow {
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
   }
@@ -314,7 +315,8 @@ h1, h2 {
 .title {
   grid-column: 1/9;
   justify-self: start;
-  border-bottom: 0.1rem ridge var(--back3);;
+  margin-top: 3rem;
+  /* border-bottom: 0.1rem ridge var(--back3);; */
 }
 
 .jaugeL, .jaugeL1 , .jaugeL2 , .jaugeR, .jaugeR1 , .jaugeR2 {
@@ -431,34 +433,22 @@ h1, h2 {
 #img1 img {
   position:absolute;
   height: 30rem;
-  /* left: 4rem; */
-  /* animation-name: changeImg; */
-  /* transform: scale(0.5); */
-  /* animation: 1s linear 0 infinite normal; */
   animation-name: changeImg;
   animation-duration: 28s;
   animation-delay: 0;
-  /* animation-timing-function: cubic-bezier(.3,.7,.7,.3); */
   animation-timing-function: linear;
-  /* transition-timing-function: cubic-bezier(<X p1>, <Y p1>, <X p2>, <Y p2>); */
   animation-iteration-count: infinite;
 }
 
 #img2 {
-  position:relative;
-  /* height: 30rem; */
-  /* min-width: 63.5rem; */
-  align-items: center;
   max-width: 98%;
-  /* background-color: greenyellow; */
-  margin: 0;
+  /* margin-right: 1rem; */
+  margin-left: 1rem;
+  /* background-color: hotpink; */
 }
 
 #img2 img {
-  /* position:absolute; */
   max-width: 98%;
-  /* width: 3rem; */
-  /* height: 30rem; */
 }
 
 #img2 img:hover {
@@ -498,14 +488,37 @@ h1, h2 {
 
 .commentR {
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .commentL {
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .visualisation {
   margin: 10;
+}
+
+.certificat {
+  /* justify-content: center; */
+  /* grid-template-columns: repeat(2 , 1fr); */
+  /* align-items: center; */
+  /* background-color: hotpink; */
+  grid-column: 1/9;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* line-height: 2rem; */
+}
+.certificat img {
+  max-width: 100%;
+  height: 15rem;
+  margin: 1rem;
 }
 
 .center {
